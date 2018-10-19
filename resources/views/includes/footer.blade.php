@@ -1,2 +1,2 @@
 
-    <p>&copy; Company 2017-2018</p>
+    <p>&copy; Anime World 1994-2018</p>
