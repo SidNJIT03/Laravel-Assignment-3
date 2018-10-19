@@ -5,11 +5,11 @@
     <div class="card nt-3 pl-2 pr-2">
         <div class="card-header">
             <h1>Contact</h1>
-            <!--<p class="lead">Please use this to contact the site owner.</p>-->
+            <p class="lead">Please use this to contact the site owner.</p>
         </div>
         <div class="card-body">
             <form role="form" id="contact-form" class="contact-form" action="{{route('contact.store')}}" method="post">
-                    
+                    @csrf
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input name="name" type="text" class="form-control" id="name" placeholder="name">
