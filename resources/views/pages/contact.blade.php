@@ -8,32 +8,16 @@
             <p class="lead">Please use this to contact the site owner.</p>
         </div>
         <div class="card-body">
-            <form action="/contact" method="post">
-                {{ csrf_field() }}
+            <form role="form" id="contact-form" class="contact-form" action="{{route('contact.store')}}" method="post">
+                    @csrf
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" placeholder="name">
+                </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input name="email" type="email" class="form-control" id="email" placeholder="name@example.com">
                 </div>
-                <!--<div class="form-group">
-                    <label for="exampleFormControlSelect1">Example select</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlSelect2">Example multiple select</label>
-                    <select multiple class="form-control" id="exampleFormControlSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>-->
                 <div class="form-group">
                     <label for="body">Message</label>
                     <textarea name="body" class="form-control" id="body" rows="3"></textarea>
